@@ -1,14 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ImageCropperModule } from 'ngx-image-cropper';
 
 import { AppComponent } from './app.component';
+import { ImgCropperComponent } from './img-cropper/img-cropper.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ImgCropperComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ImageCropperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

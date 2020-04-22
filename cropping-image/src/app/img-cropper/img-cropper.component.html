@@ -1,0 +1,23 @@
+<input type="file" (change)="fileChangeEvent($event)" />
+
+<hr>
+
+<image-cropper
+    [imageChangedEvent]="imageChangedEvent"
+    [maintainAspectRatio]="true"
+    format="png"
+    (imageLoaded)="imageLoaded()"
+    (cropperReady)="cropperReady()"
+    (loadImageFailed)="loadImageFailed()"
+></image-cropper>
+
+<button
+    type="button"
+    (click)="imageCropped($event)"
+>
+    Crop Image
+</button>
+
+<hr>
+
+<img [src]="croppedImage" />
